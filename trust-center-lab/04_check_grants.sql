@@ -1,0 +1,13 @@
+-- 付録用：30分ワークショップ本編では実行不要。APPENDIX.mdの手順に従う。
+-- Trust Centerワークショップ / 04_check_grants.sql
+-- このファイルを1回の実行単位として使用する。
+-- 付与状況を確認（2のロール作成後に、確認可能な管理ロールで実行）
+USE ROLE SECURITYADMIN;
+SHOW GRANTS TO ROLE LAB_TRUST_CENTER_VIEWER;
+SHOW GRANTS TO ROLE LAB_TRUST_CENTER_ADMIN;
+SHOW GRANTS TO ROLE LAB_TRUST_CENTER_USAGE_VIEWER;
+SHOW GRANTS OF ROLE LAB_TRUST_CENTER_VIEWER;
+SHOW GRANTS OF ROLE LAB_TRUST_CENTER_ADMIN;
+SHOW GRANTS OF ROLE LAB_TRUST_CENTER_USAGE_VIEWER;
+-- TO ROLE: ロールへ直接付与された権限など / OF ROLE: ロールの付与先
+-- 継承・セカンダリロールを含む実効権限全体とは区別する。
